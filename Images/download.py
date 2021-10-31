@@ -6,6 +6,7 @@ print("--- %s seconds ---" % (time.time() - start_time))
 url = 'https://cs7ns1.scss.tcd.ie/index.php/?shortname=lpezm&download=resume_speed'
 captchaNames = requests.get(url).text
 print(captchaNames)
+print("Time for file retrieval is:","--- %s seconds ---" % (time.time() - start_time))
 for i in captchaNames.split(',\n'):
     file_url = 'https://cs7ns1.scss.tcd.ie/index.php/?shortname=lpezm&download=resume_speed&myfilename=' + i
     files = requests.get(file_url)
