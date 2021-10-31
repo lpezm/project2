@@ -12,4 +12,5 @@ for i in captchaNames.split(',\n'):
     file = open(i,"wb")
     file.write(files.content)
     file.close()
+    print("Time for file retrieval is:","--- %s seconds ---" % (time.time() - start_time))
 print("Time for file retrieval is:","--- %s seconds ---" % (time.time() - start_time))
